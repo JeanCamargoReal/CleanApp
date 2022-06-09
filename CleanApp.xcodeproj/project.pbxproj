@@ -14,6 +14,8 @@
 		C59B06CC28511E800022E42E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59B06A1284FD7780022E42E /* Domain.framework */; };
 		C59B06CD28511E800022E42E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C59B06A1284FD7780022E42E /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C59B06D2285280660022E42E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B06D1285280660022E42E /* Model.swift */; };
+		C59B06D42852815F0022E42E /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B06D32852815F0022E42E /* RemoteAddAccount.swift */; };
+		C59B06D6285281B30022E42E /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B06D5285281B30022E42E /* HttpPostClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C59B06B8284FDCA70022E42E /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59B06BD284FDCA70022E42E /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 		C59B06D1285280660022E42E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C59B06D32852815F0022E42E /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
+		C59B06D5285281B30022E42E /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 		C59B06B2284FDCA70022E42E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C59B06D32852815F0022E42E /* RemoteAddAccount.swift */,
+				C59B06D5285281B30022E42E /* HttpPostClient.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 					};
 					C59B06B0284FDCA70022E42E = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					C59B06B7284FDCA70022E42E = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -294,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59B06D6285281B30022E42E /* HttpPostClient.swift in Sources */,
+				C59B06D42852815F0022E42E /* RemoteAddAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +514,7 @@
 		C59B06C1284FDCA70022E42E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -528,6 +538,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -537,6 +548,7 @@
 		C59B06C2284FDCA70022E42E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -569,6 +581,7 @@
 		C59B06C4284FDCA70022E42E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KA74A9Q966;
@@ -586,6 +599,7 @@
 		C59B06C5284FDCA70022E42E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KA74A9Q966;
