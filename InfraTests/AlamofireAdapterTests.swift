@@ -7,6 +7,9 @@
 
 import XCTest
 import Alamofire
+import Data
+
+// MARK: - PROD
 
 class AlamofireAdapter {
 	private let session: Session
@@ -16,8 +19,7 @@ class AlamofireAdapter {
 	}
 	
 	func post(to url: URL, with data: Data?) {
-		let json = data == nil ? nil : try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
-		session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
+		session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).resume()
 	}
 }
 
@@ -38,6 +40,8 @@ class AlamofireAdapterTests: XCTestCase {
 		}
 	}
 }
+
+// MARK: - Extensions
 
 extension AlamofireAdapterTests {
 	func makeSut(file: StaticString = #filePath, line: UInt = #line) -> AlamofireAdapter {
@@ -63,6 +67,8 @@ extension AlamofireAdapterTests {
 		wait(for: [exp], timeout: 1)
 	}
 }
+
+// MARK: - Stub
 
 class UrlProtocolStub: URLProtocol {
 	static var emit: ((URLRequest) -> Void)?
